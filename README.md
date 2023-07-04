@@ -1,1 +1,2 @@
 - Google for creating folders in GitHub
+-Checked the "not in" syntax with Google
