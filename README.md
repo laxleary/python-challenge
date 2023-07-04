@@ -1,5 +1,5 @@
 # Python Challenge 
-*The included code was entirely designed by myself, with the only directly copied blocks being from previous in-class activities. Outside sources were used to identify commands or command syntax in the following ways:* 
+*The included code was entirely designed by myself, with the only directly copied blocks being from previous in-class activities. Outside sources were used to identify functions or code syntax in the following ways:* 
 
 - Google research was used to remind myself how to create folders in GitHub (We then reviewed this in class the next day, but I used Google first). 
   
