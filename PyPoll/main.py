@@ -1,3 +1,4 @@
+#Import the necessary modules
 import os
 import csv
 
@@ -32,14 +33,16 @@ with open(csvpath) as csvfile:
         with open(csvpath) as csvfile:
             csvreader = csv.reader(csvfile, delimiter=',')
             
-            #The csvheader line below may be unecessary due to the if statement
-            
+            #The if statement below ignores the header, so we do not need to skip it manually
+            #Create a dictionary for each candidate's % of vote
+            #Create a list of %s so we can use max()
             for row in csvreader:
                 if row[2] == candidate:
                     vote_counts[candidate]+=1 
             vote_percentages[candidate] = f"{round(vote_counts[candidate]/total_votes*100,3)}%"
             percents.append(round(vote_counts[candidate]/total_votes*100,3))
-            
+
+    #Pull out the candidate with the largest % of votes as winner        
     for candidate in candidates:
         if vote_percentages[candidate] == f"{max(percents)}%":
             winner = candidate
@@ -48,7 +51,7 @@ with open(csvpath) as csvfile:
 #Create the txt file and specify where we would like it to be stored
 output_path = os.path.join("PyPoll", "Analysis", "election_results.txt")
 
-#Write the txt file
+#Write the txt file, append after initial write to avoid overwriting
 with open(output_path, 'w') as txtfile:
     txtfile.write(f" \n Election Results \n ----------------- \n Total Votes: {total_votes} \n -----------------")
     
