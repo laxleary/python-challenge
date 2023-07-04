@@ -39,10 +39,8 @@ for i in range(85):
         gd_name = date[i+1]
 
 
-financial_analysis = f"Financial Analysis \n -------------- \n Total Months: {total_months} \n Total: ${Total} \n Average Change: ${average_change} \n Greatest Increase in Profits: {gi_name} (${greatest_increase}) \n Greatest Decrease in Profits: {gd_name} (${greatest_decrease})"
+financial_analysis = f" \n Financial Analysis \n -------------- \n Total Months: {total_months} \n Total: ${Total} \n Average Change: ${average_change} \n Greatest Increase in Profits: {gi_name} (${greatest_increase}) \n Greatest Decrease in Profits: {gd_name} (${greatest_decrease})"
 output_path = os.path.join("PyBank", "Analysis", "financial_analysis.txt")
 with open(output_path, 'w') as txtfile:
     txtfile.write(f"{financial_analysis}")
 print(f"{financial_analysis}")
-
-print("Success!")
