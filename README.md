@@ -9,4 +9,4 @@
 
 - I copied the first few lines of code off of our CSV Read/Write Activity and then changed the variables/file paths appropriately. 
 
-As usual, I referred to our class activities while completing the assignment, but none of my code came from tutors, other students, instructors, or TAs for this assignment.
+On this particular assignment, I did not receive any assistance from tutors, other students, instructors, or TAs.
