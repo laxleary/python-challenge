@@ -1,2 +1,3 @@
 - Google for creating folders in GitHub
 -Checked the "not in" syntax with Google
+-Google research to find the append function for txt files
