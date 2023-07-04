@@ -1,23 +1,12 @@
 
-import os
-import csv
+import pandas as pd
+from pathlib import Path
 
-#create lists to store data
-date = []
-profit_losses = []
+budget_file = Path("PyBank","Resources", "budget_data.csv")
 
-#open and read the csv file
-csvpath = os.path.join(r"PyBank\Resources\budget_data.csv")
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
+budget_df = pd.read_csv(budget_file, encoding = "ISO-8859-1")
 
-    csvheader= next(csvreader)
-    print(csvheader)
-
-    for row in csvreader:
-
-        date.append(row[0])
-
-        profit_losses.append(row[1])
-
-
+months = budget_df["Date"].unique()
+months_count=len(months)
+total = budget_df["Profit/Losses"].sum()
+print(total)
