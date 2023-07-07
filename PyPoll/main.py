@@ -12,11 +12,12 @@ vote_percentages = {}
 winner = str()
 percents = []
 
-#open and read the csv file for our basic information
-csvpath = os.path.join("PyPoll","Resources","election_data.csv")
+#open and read the csv file for our basic information (path is relative from inside of the PyPoll folder, the location of this code file)
+csvpath = os.path.join("Resources","election_data.csv")
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
+    #Store the header as a variable. 
     csvheader= next(csvreader)
 
     #Find the list of candidates
@@ -48,8 +49,8 @@ with open(csvpath) as csvfile:
             winner = candidate
         
     
-#Create the txt file and specify where we would like it to be stored
-output_path = os.path.join("PyPoll", "Analysis", "election_results.txt")
+#Create the txt file and specify where we would like it to be stored (path is relative from inside of the PyPoll folder, the location of this code file) 
+output_path = os.path.join("Analysis", "election_results.txt")
 
 #Write the txt file, append after initial write to avoid overwriting
 with open(output_path, 'w') as txtfile:
