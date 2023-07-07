@@ -7,11 +7,12 @@ import csv
 date = []
 profit_losses = []
 
-#open and read the csv file
-csvpath = os.path.join("PyBank","Resources","budget_data.csv")
+#open and read the csv file (path is relative from inside of the PyBank folder, the location of this code file)
+csvpath = os.path.join("Resources","budget_data.csv")
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
+    #store the header as a variable
     csvheader= next(csvreader)
 
     #store lists of the date and profits/losses
@@ -44,8 +45,8 @@ for i in range(85):
 #Store our desired text as a variable
 financial_analysis = f" \n Financial Analysis \n -------------- \n Total Months: {total_months} \n Total: ${Total} \n Average Change: ${average_change} \n Greatest Increase in Profits: {gi_name} (${greatest_increase}) \n Greatest Decrease in Profits: {gd_name} (${greatest_decrease}) \n"
 
-#Create the txt file and specify where we would like it to be stored
-output_path = os.path.join("PyBank", "Analysis", "financial_analysis.txt")
+#Create the txt file and specify where we would like it to be stored (path is relative from inside of the PyPoll folder, the location of this code file)
+output_path = os.path.join("Analysis", "financial_analysis.txt")
 
 #Write the txt file
 with open(output_path, 'w') as txtfile:
